@@ -1,0 +1,14 @@
+.footer {
+    margin-top: auto;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    color: var(--color-light--1);
+}
+
+a.cta:link,
+a.cta:visited {
+    color: var(--color-light--1);
+    text-decoration: none;
+}
