@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub } from "@fortawesome/free-regular-svg-icons";
 
 function Footer() {
   return (
@@ -14,7 +12,7 @@ function Footer() {
             target="_blank"
             className={styles.cta}
           >
-            <FontAwesomeIcon icon="fa-solid fa-check-square" />
+            {"\u25FD"} Paul Fadayo
           </Link>
         </>
       </p>
