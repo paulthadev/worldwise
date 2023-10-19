@@ -12,7 +12,7 @@ function CountryList({ cities, isLoading }) {
     );
 
   /**
-  Using MAP to loop over the cities array to filter unique country: 
+  1. Using MAP to loop over the cities array to filter unique country: 
 
    * Each Map() entry must have a unique key, so by passing the countries as keys, we remove any duplicates.
    * Since we use unique keys for deduplication instead of unique values with Set(), there's no need to convert to json and back, making the code a lot simpler.
