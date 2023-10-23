@@ -23,7 +23,7 @@ function Map() {
       <MapContainer
         className={styles.map}
         center={mapPosition}
-        zoom={13}
+        zoom={10}
         scrollWheelZoom={true}
       >
         <TileLayer
