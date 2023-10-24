@@ -9,6 +9,7 @@ function CitiesProvider({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [currentCity, setCurrentCity] = useState({});
 
+  // Fetch API
   useEffect(function () {
     async function fetchCities() {
       try {
@@ -28,6 +29,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
+  // GET CITY
   async function getCity(id) {
     try {
       setIsLoading(true);
@@ -38,7 +40,47 @@ function CitiesProvider({ children }) {
       const data = await response.json();
       setCurrentCity(data);
     } catch (error) {
-      alert(`${error}`);
+      alert(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  //  POST REQUEST TO API
+  async function createCity(newCity) {
+    try {
+      setIsLoading(true);
+      const response = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "content-type": "application/json; charset=UTF-8",
+        },
+      });
+
+      if (!response.ok) throw new Error("Failed to post!");
+
+      const data = await response.json();
+
+      setCities((cities) => [...cities, data]);
+    } catch (error) {
+      alert(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  //  DELETE ITEM FROM API
+  async function deleteCity(id) {
+    try {
+      setIsLoading(true);
+      await fetch(`${BASE_URL}/cities/${id}`, {
+        method: "DELETE",
+      });
+
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch (error) {
+      alert("There was an error deleting city");
     } finally {
       setIsLoading(false);
     }
@@ -51,6 +93,8 @@ function CitiesProvider({ children }) {
         isLoading,
         currentCity,
         getCity,
+        createCity,
+        deleteCity,
       }}
     >
       {children}
