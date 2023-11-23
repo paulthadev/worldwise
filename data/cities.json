@@ -13,18 +13,6 @@
       "id": 73930385
     },
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
       "cityName": "Berlin",
       "country": "Germany",
       "emoji": "🇩🇪",
@@ -35,6 +23,30 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Akure South",
+      "country": "Nigeria",
+      "emoji": "🇳🇬",
+      "date": "2023-11-23T02:29:07.248Z",
+      "notes": "Visit to Federal University of Technology, Akure",
+      "position": {
+        "lat": "7.301174051291497",
+        "lng": "5.132331848144532"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Atebubu-Amantin Municipal District",
+      "country": "Ghana",
+      "emoji": "🇬🇭",
+      "date": "2023-11-23T03:32:54.210Z",
+      "notes": "",
+      "position": {
+        "lat": "7.580327791330154",
+        "lng": "-1.0107421875000002"
+      },
+      "id": 98443200
     }
   ]
 }
