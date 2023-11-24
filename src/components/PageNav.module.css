@@ -32,3 +32,10 @@ a.ctaLink:visited {
   padding: 0.8rem 2rem;
   border-radius: 7px;
 }
+
+.extra {
+  background-color: var(--color-brand--2);
+  color: var(--color-light--2);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
