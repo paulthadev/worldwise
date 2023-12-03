@@ -23,30 +23,6 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
-    },
-    {
-      "cityName": "Akure South",
-      "country": "Nigeria",
-      "emoji": "🇳🇬",
-      "date": "2023-11-23T02:29:07.248Z",
-      "notes": "Visit to Federal University of Technology, Akure",
-      "position": {
-        "lat": "7.301174051291497",
-        "lng": "5.132331848144532"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Atebubu-Amantin Municipal District",
-      "country": "Ghana",
-      "emoji": "🇬🇭",
-      "date": "2023-11-23T03:32:54.210Z",
-      "notes": "",
-      "position": {
-        "lat": "7.580327791330154",
-        "lng": "-1.0107421875000002"
-      },
-      "id": 98443200
     }
   ]
 }
