@@ -1,4 +1,10 @@
-import { createContext, useEffect, useContext, useReducer } from "react";
+import {
+  createContext,
+  useEffect,
+  useContext,
+  useReducer,
+  useCallback,
+} from "react";
 
 const BASE_URL = `https://breezy-fluoridated-gas.glitch.me`;
 const CitiesContext = createContext();
@@ -91,28 +97,31 @@ function CitiesProvider({ children }) {
   }, []);
 
   // GET CITY
-  async function getCity(id) {
-    if (Number(id) === currentCity.id) return;
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (Number(id) === currentCity.id) return;
 
-    dispatch({ type: "loading" });
-    try {
-      const response = await fetch(`${BASE_URL}/cities/${id}`);
+      dispatch({ type: "loading" });
+      try {
+        const response = await fetch(`${BASE_URL}/cities/${id}`);
 
-      if (!response.ok)
+        if (!response.ok)
+          dispatch({
+            type: "rejected",
+            payload: "failed to fetch",
+          });
+
+        const data = await response.json();
+        dispatch({ type: "city/loaded", payload: data });
+      } catch {
         dispatch({
           type: "rejected",
-          payload: "failed to fetch",
+          payload: "There's an error loading city",
         });
-
-      const data = await response.json();
-      dispatch({ type: "city/loaded", payload: data });
-    } catch {
-      dispatch({
-        type: "rejected",
-        payload: "There's an error loading city",
-      });
-    }
-  }
+      }
+    },
+    [currentCity.id]
+  );
 
   //  POST REQUEST TO API
   async function createCity(newCity) {
