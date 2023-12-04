@@ -1,9 +1,9 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { CitiesProvider } from "./contexts/CititesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
-import ProtectedRoute from "./pages/ProtectedRoute";
+import { CitiesProvider } from "./contexts/CititesContext";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import ProtectedRoute from "./pages/ProtectedRoute";
 import CountryList from "./components/CountryList";
 import CityList from "./components/CityList";
 import City from "./components/City";
