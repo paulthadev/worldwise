@@ -41,7 +41,7 @@ The WorldWise application uses a server that runs on Glitch to provide city data
 
 ## Usage
 
-` 0. if running a JSON server:
+0.  if running a JSON server:
 
 ```shell
 npm run server
